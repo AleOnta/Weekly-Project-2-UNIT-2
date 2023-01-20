@@ -1,0 +1,32 @@
+nav {
+  background-color: $white;
+  position: fixed;
+  z-index: 999;
+
+  .container-fluid .navbar-brand img {
+    width: 45px;
+  }
+
+  .navbar-nav {
+    width: 25%;
+    @media screen and (max-width: 1450px) {
+      width: 30%;
+    }
+    @media screen and (max-width: 1250px) {
+      width: 39%;
+    }
+
+    li a {
+      font-size: 1.2em;
+
+      @media screen and (max-width: 1450px) {
+      }
+    }
+  }
+
+  .icon-container i {
+    color: $oxford-blue;
+    font-size: 1.5em;
+    padding: 1em;
+  }
+}
