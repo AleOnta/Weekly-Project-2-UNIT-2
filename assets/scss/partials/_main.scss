@@ -1,0 +1,18 @@
+main {
+  .container {
+    background-color: rgba(255, 255, 255, 0.281);
+    border-radius: 50px;
+
+    #main-title {
+      margin-top: 1em;
+      font: {
+        size: 1.2em;
+        weight: 700;
+      }
+    }
+
+    .main-paragraph span {
+      text-decoration: underline;
+    }
+  }
+}

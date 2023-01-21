@@ -7,6 +7,16 @@ nav {
     width: 45px;
   }
 
+  .container-fluid .navbar-brand p {
+    margin: 0;
+    color: #9ba1d6;
+    font: {
+      weight: 700;
+      size: 1.4em;
+      family: $title;
+    }
+  }
+
   .navbar-nav {
     width: 25%;
     @media screen and (max-width: 1450px) {
@@ -18,8 +28,16 @@ nav {
 
     li a {
       font-size: 1.2em;
+      transition: 0.3s;
 
-      @media screen and (max-width: 1450px) {
+      &:hover {
+        cursor: pointer;
+        color: $glaucous !important;
+        transition: 0.4s;
+      }
+
+      @media screen and (max-width: 1300px) {
+        font-size: 1em;
       }
     }
   }
@@ -28,5 +46,16 @@ nav {
     color: $oxford-blue;
     font-size: 1.5em;
     padding: 1em;
+    transition: 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      color: $glaucous;
+      transition: 0.4s;
+    }
+
+    @media screen and (max-width: 1300px) {
+      font-size: 1.3em;
+    }
   }
 }
