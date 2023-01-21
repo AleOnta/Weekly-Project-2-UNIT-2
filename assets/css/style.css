@@ -8,8 +8,6 @@ body {
 
 nav {
   background-color: white;
-  position: fixed;
-  z-index: 999;
 }
 nav .container-fluid .navbar-brand img {
   width: 45px;
@@ -22,11 +20,11 @@ nav .container-fluid .navbar-brand p {
   font-family: "Rubik", sans-serif;
 }
 nav .navbar-nav {
-  width: 25%;
+  width: 28%;
 }
 @media screen and (max-width: 1450px) {
   nav .navbar-nav {
-    width: 30%;
+    width: 35%;
   }
 }
 @media screen and (max-width: 1250px) {
@@ -48,23 +46,48 @@ nav .navbar-nav li a:hover {
     font-size: 1em;
   }
 }
-nav .icon-container i {
+nav .icon-container {
+  margin-top: 1em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 992px) {
+  nav .icon-container {
+    margin: 0;
+    position: static;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+nav i {
   color: #0a2342;
   font-size: 1.5em;
   padding: 1em;
   transition: 0.3s;
 }
-nav .icon-container i:hover {
+nav i:hover {
   cursor: pointer;
   color: #6883ba;
   transition: 0.4s;
 }
+@media screen and (min-width: 992px) {
+  nav i {
+    padding: 0.5em;
+  }
+}
 @media screen and (max-width: 1300px) {
-  nav .icon-container i {
+  nav i {
     font-size: 1.3em;
   }
 }
 
+main {
+  margin-top: 6em;
+}
 main .container {
   background-color: rgba(255, 255, 255, 0.281);
   border-radius: 50px;
@@ -74,52 +97,141 @@ main .container #main-title {
   font-size: 1.2em;
   font-weight: 700;
 }
+main .container ol span {
+  font-weight: 700;
+}
 main .container .main-paragraph span {
   text-decoration: underline;
 }
 
-main aside {
-  width: 100%;
-}
-main aside .card {
-  box-shadow: 5px 5px 4px 1px rgba(0, 0, 0, 0.5);
-}
-main aside .card .card-image {
-  height: 150px;
-  padding: 15px 0;
+#aside {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+}
+@media screen and (min-width: 576px) {
+  #aside {
+    justify-content: space-evenly;
+  }
+}
+#aside #card-row {
+  width: 100%;
+  height: 100%;
+}
+
+.card {
+  max-width: 360px;
+  box-shadow: 0px 10px 7px 3px rgba(0, 0, 0, 0.4);
+}
+@media screen and (min-width: 767px) {
+  .card {
+    width: 100%;
+    height: 15%;
+  }
+}
+.card #card-imageContainer {
+  height: auto;
   background-color: rgb(229, 204, 251);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-main aside .card img {
-  height: 90%;
-  -o-object-fit: contain;
-     object-fit: contain;
+@media screen and (min-width: 768px) {
+  .card #card-imageContainer {
+    height: 100%;
+  }
 }
-main aside .card h5.card-title {
-  font-size: 1.2em;
-  font-weight: 700;
+@media screen and (min-width: 1400px) {
+  .card #card-imageContainer {
+    height: 100%;
+  }
 }
-main aside .card p.card-text {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 0.9em;
+.card #card-imageContainer img {
+  width: 80%;
+}
+@media screen and (min-width: 1400px) {
+  .card #card-imageContainer img {
+    width: 80px;
+    height: auto;
+  }
+}
+.card #card-textContainer {
+  height: 100%;
+}
+@media screen and (min-width: 768px) {
+  .card #card-textContainer h5 {
+    font-size: 0.8em;
+    font-weight: 700;
+  }
+  .card #card-textContainer p {
+    font-size: 0.7em;
+  }
+}
+@media screen and (min-width: 768px) {
+  .card #description {
+    height: 32%;
+    overflow: hidden;
+    text-overflow: ellipsis "[...]";
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .card #description {
+    height: 27%;
+    overflow: hidden;
+    text-overflow: ellipsis "[...]";
+    margin-bottom: 10px;
+  }
+}
+
+#partnersRow {
+  padding: 0 0 1em 0;
+  margin-top: 2em;
 }
 
 #partnerText {
-  background-color: rgba(134, 131, 109, 0.24);
+  width: 100%;
+  margin: 1.5em 0 1.5em 0;
+  color: #0a2342;
+  background-color: rgba(255, 255, 255, 0.281);
+  padding: 1em;
+  border-radius: 20px;
+  box-shadow: 0px 20px 15px 9px rgba(134, 131, 109, 0.24);
+}
+@media screen and (min-width: 576px) {
+  #partnerText {
+    width: 500px;
+  }
 }
 #partnerText h3 {
+  padding-top: em;
   font-weight: 700;
+}
+#partnerText p {
+  color: #6883ba;
 }
 
 #partner {
-  background-color: rgba(255, 255, 255, 0.438);
-  box-shadow: 5px 11px 7px 1px gray;
+  max-width: 225px;
+  background-color: white;
+  box-shadow: 5px 11px 7px 1px rgba(134, 131, 109, 0.24);
   border-radius: 100%;
   margin: 0.5em;
+}
+
+#carouselContainer {
+  margin: auto;
+  width: 95%;
+}
+@media screen and (min-width: 992px) {
+  #carouselContainer {
+    width: 926px;
+  }
+}
+@media screen and (min-width: 1150px) {
+  #carouselContainer #carousel-arrow {
+    background-color: #0a2342;
+  }
 }
 
 footer {
@@ -128,11 +240,16 @@ footer {
   color: white;
 }
 footer .row > div p {
-  color: #0a2342;
+  color: white;
   padding-top: 1em;
   margin-bottom: 0.5em;
   font-size: 1em;
   font-weight: 700;
+}
+@media screen and (min-width: 576px) {
+  footer .row > div p {
+    font-size: 1.2em;
+  }
 }
 footer .row > div ul {
   padding: 0;
@@ -144,6 +261,11 @@ footer .row > div ul {
 }
 footer .row > div ul li {
   font-size: 0.6em;
+}
+@media screen and (min-width: 576px) {
+  footer .row > div ul li {
+    font-size: 0.9em;
+  }
 }
 footer .row > div ul li a {
   color: white;

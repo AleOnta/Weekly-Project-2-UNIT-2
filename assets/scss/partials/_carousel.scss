@@ -1,0 +1,13 @@
+#carouselContainer {
+  margin: auto;
+  width: 95%;
+  @media screen and (min-width: 992px) {
+    width: 926px;
+  }
+
+  #carousel-arrow {
+    @media screen and (min-width: 1150px) {
+      background-color: $oxford-blue;
+    }
+  }
+}
