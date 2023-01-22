@@ -57,7 +57,7 @@
     <main>
       <div class="container">
         <div class="row my-2">
-          <div class="col col-12 col-md-8 p-3">
+          <div class="col col-12 col-md-8 p-3" id="mainTextContainer">
             <h2 id="main-title">
               Welcome in ~Inz<br />
               The first forum based on AI
@@ -108,7 +108,7 @@
           <div class="col col-12 col-md-4" id="aside">
             <div class="card mb-3">
               <div class="row g-0" id="card-row">
-                <div class="col-5 col-md-4" id="card-imageContainer">
+                <div class="col-5 col-md-4 card1" id="card-imageContainer">
                   <img src="./assets/imgs/aside1.png" class="img-fluid rounded-start" alt="..." />
                 </div>
                 <div class="col-7 col-md-8">
@@ -125,7 +125,7 @@
             </div>
             <div class="card mb-3">
               <div class="row g-0" id="card-row">
-                <div class="col-5 col-md-4" id="card-imageContainer">
+                <div class="col-5 col-md-4 card2" id="card-imageContainer">
                   <img src="./assets/imgs/aside2.png" class="img-fluid rounded-start" alt="..." />
                 </div>
                 <div class="col-7 col-md-8">
@@ -142,7 +142,7 @@
             </div>
             <div class="card mb-3">
               <div class="row g-0" id="card-row">
-                <div class="col-5 col-md-4" id="card-imageContainer">
+                <div class="col-5 col-md-4 card3" id="card-imageContainer">
                   <img src="./assets/imgs/aside3.png" class="img-fluid rounded-start" alt="..." />
                 </div>
                 <div class="col-7 col-md-8">
@@ -159,7 +159,7 @@
             </div>
             <div class="card mb-3">
               <div class="row g-0" id="card-row">
-                <div class="col-5 col-md-4" id="card-imageContainer">
+                <div class="col-5 col-md-4 card4" id="card-imageContainer">
                   <img src="./assets/imgs/aside4.png" class="img-fluid rounded-start" alt="..." />
                 </div>
                 <div class="col-7 col-md-8">
@@ -183,21 +183,21 @@
               <p>These are some of our proudest Partners</p>
             </div>
           </div>
-          <div id="partner" class="col col-5 col-lg-3 d-flex justify-content-center align-items-center">
+          <div class="partner partner1 col col-5 col-lg-3 d-flex justify-content-center align-items-center">
             <img class="rounded w-100" src="./assets/imgs/partner 1.svg" alt="" />
           </div>
-          <div id="partner" class="col col-5 col-lg-3 d-flex justify-content-center align-items-center">
+          <div class="partner partner2 col col-5 col-lg-3 d-flex justify-content-center align-items-center">
             <img class="rounded w-100" src="./assets/imgs/partner 2.svg" alt="" />
           </div>
-          <div id="partner" class="col col-5 col-lg-3 d-flex justify-content-center align-items-center">
+          <div class="partner partner3 col col-5 col-lg-3 d-flex justify-content-center align-items-center">
             <img class="rounded w-100" src="./assets/imgs/partner 3.svg" alt="" />
           </div>
-          <div id="partner" class="col col-5 col-lg-3 d-flex justify-content-center align-items-center">
+          <div class="partner partner4 col col-5 col-lg-3 d-flex justify-content-center align-items-center">
             <img class="rounded w-100" src="./assets/imgs/partner 4.svg" alt="" />
           </div>
         </div>
       </div>
-      <div id="carouselExampleCaptions" class="carousel slide my-5">
+      <div id="carouselExampleCaptions" class="carousel slide my-5" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button
             type="button"
@@ -222,25 +222,34 @@
         </div>
         <div id="carouselContainer">
           <div class="carousel-inner">
-            <div class="carousel-item active">
+            <div class="carousel-item active" data-bs-interval="4000">
               <img src="./assets/imgs/carousel 1.jpg" class="d-block w-100" alt="..." />
               <div class="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>Some representative placeholder content for the first slide.</p>
+                <h5>Intel Artificial Intelligence</h5>
+                <p>
+                  Perform complex computations and run AI efficiently at scale with your current skills and
+                  infrastructure enhanced with Intel® AI technologies and partner solutions.
+                </p>
               </div>
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item" data-bs-interval="4000">
               <img src="./assets/imgs/carousel 2.png" class="d-block w-100" alt="..." />
               <div class="carousel-caption d-none d-md-block">
-                <h5>Second slide label</h5>
-                <p>Some representative placeholder content for the second slide.</p>
+                <h5>Scale AI Faster with Technology You Know</h5>
+                <p>
+                  Turn your AI ambitions into reality by leveraging an unmatched range of open source and free tools,
+                  libraries, optimized software frameworks, and our AI hardware portfolio
+                </p>
               </div>
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item" data-bs-interval="4000">
               <img src="./assets/imgs/carousel 3.png" class="d-block w-100" alt="..." />
               <div class="carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
-                <p>Some representative placeholder content for the third slide.</p>
+                <h5>Artificial neural networks</h5>
+                <p>
+                  usually simply called neural networks (NNs) or neural nets, are computing systems inspired by the
+                  biological neural networks that constitute animal brains.
+                </p>
               </div>
             </div>
           </div>

@@ -5,8 +5,21 @@ $transparentGlaucous: rgba(133, 151, 187, 0.39);
 $white: #ffffffff;
 $china-rose: #a04668ff;
 $shadow: rgba(134, 131, 109, 0.24);
+$darkerShadow: rgba(107, 105, 87, 0.438);
 $emphasis: rgb(164, 129, 194);
 $cardBackground: rgba(229, 204, 251, 1);
+$cardColors: (
+  card1: #e5ccfb,
+  card2: #c2c8fc,
+  card3: #cae7fb,
+  card4: #e4e1fb,
+);
+$partnersColors: (
+  partner1: #e5ccfb,
+  partner2: #c2c8fc,
+  partner3: #cae7fb,
+  partner4: #e4e1fb,
+);
 $background: linear-gradient(
   90deg,
   rgba(194, 200, 252, 1) 0%,
