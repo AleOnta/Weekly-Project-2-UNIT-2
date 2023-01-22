@@ -1,0 +1,79 @@
+.dark-mode {
+  background: rgb(34, 34, 34);
+  background: linear-gradient(
+    90deg,
+    rgba(34, 34, 34, 1) 0%,
+    rgba(51, 61, 78, 1) 17%,
+    rgba(36, 31, 78, 1) 36%,
+    rgba(29, 10, 46, 1) 66%,
+    rgba(36, 64, 84, 1) 100%
+  );
+  color: $text;
+  transition: 0.6s;
+
+  nav {
+    background-color: $darkNavbar;
+
+    .navbar-toggler {
+      color: $darkCardImgBackground;
+    }
+    .nav-link,
+    i,
+    .container-fluid .navbar-brand p {
+      color: $darkCardImgBackground !important;
+    }
+  }
+
+  main {
+    .container {
+      background-color: $darkTransparentBackground;
+    }
+
+    #aside {
+      border-color: $darkCardImgBackground;
+      background-color: $darkTransparentBackground;
+      @media screen and (min-width: 768px) {
+        box-shadow: 5px 5px 7px 0px $darkCardImgBackground;
+      }
+      .card {
+        background-color: $darkNavbar;
+        .text-muted {
+          color: $text !important;
+          transition: 0.6s;
+        }
+      }
+
+      #card-imageContainer {
+        background-color: $darkCardImgBackground;
+      }
+    }
+
+    #partnerText {
+      background-color: $darkNavbar;
+      box-shadow: 0px 5px 5px 5px $darkCardImgBackground;
+      h3,
+      p {
+        color: $darkCardImgBackground;
+      }
+    }
+
+    .partner1,
+    .partner2,
+    .partner3,
+    .partner4 {
+      background-color: $darkerOrange;
+      box-shadow: 5px 11px 7px 1px $darkCardImgBackground;
+    }
+  }
+
+  footer {
+    background-color: $darkNavbar;
+    .row > div p {
+      color: $text;
+    }
+
+    .row > div ul li a {
+      color: $darkCardImgBackground;
+    }
+  }
+}

@@ -116,9 +116,9 @@ main .container .main-paragraph span {
 }
 @media screen and (min-width: 768px) {
   #aside {
-    background-color: rgba(134, 131, 109, 0.24);
+    background-color: rgba(134, 131, 109, 0.2392156863);
     border: 1px solid white;
-    box-shadow: 5px 5px 7px 0px rgba(107, 105, 87, 0.438);
+    box-shadow: 5px 5px 7px 0px rgba(107, 105, 87, 0.4392156863);
     border-radius: 50px;
   }
 }
@@ -245,10 +245,10 @@ main .container .main-paragraph span {
   width: 100%;
   margin: 1.5em 0 1.5em 0;
   color: #0a2342;
-  background-color: rgba(255, 255, 255, 0.281);
+  background-color: rgba(255, 255, 255, 0.2823529412);
   padding: 1em;
   border-radius: 20px;
-  box-shadow: 0px 20px 15px 9px rgba(134, 131, 109, 0.24);
+  box-shadow: 0px 20px 15px 9px rgba(134, 131, 109, 0.2392156863);
 }
 @media screen and (min-width: 576px) {
   #partnerText {
@@ -270,7 +270,7 @@ main .container .main-paragraph span {
 
 .partner {
   max-width: 225px;
-  box-shadow: 5px 11px 7px 1px rgba(134, 131, 109, 0.24);
+  box-shadow: 5px 11px 7px 1px rgba(134, 131, 109, 0.2392156863);
   border-radius: 100%;
   margin: 0.5em;
 }
@@ -344,8 +344,144 @@ footer .row > div ul li a {
   text-decoration: none;
 }
 
+.toggleContainer {
+  position: fixed;
+  top: 20px;
+  right: 50%;
+  left: 50%;
+  z-index: 1999;
+}
+@media screen and (min-width: 992px) {
+  .toggleContainer {
+    left: 40%;
+    transition: 0.4s;
+  }
+}
+@media screen and (min-width: 1350px) {
+  .toggleContainer {
+    left: 50%;
+    transition: 0.4s;
+  }
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+.switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: rgb(54, 54, 54);
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #fa6f1f;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #fa6f1f;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.dark-mode {
+  background: rgb(34, 34, 34);
+  background: linear-gradient(90deg, rgb(34, 34, 34) 0%, rgb(51, 61, 78) 17%, rgb(36, 31, 78) 36%, rgb(29, 10, 46) 66%, rgb(36, 64, 84) 100%);
+  color: rgb(190, 190, 190);
+  transition: 0.6s;
+}
+.dark-mode nav {
+  background-color: #252525;
+}
+.dark-mode nav .navbar-toggler {
+  color: #fa6f1f;
+}
+.dark-mode nav .nav-link,
+.dark-mode nav i,
+.dark-mode nav .container-fluid .navbar-brand p {
+  color: #fa6f1f !important;
+}
+.dark-mode main .container {
+  background-color: rgba(0, 0, 0, 0.3215686275);
+}
+.dark-mode main #aside {
+  border-color: #fa6f1f;
+  background-color: rgba(0, 0, 0, 0.3215686275);
+}
+@media screen and (min-width: 768px) {
+  .dark-mode main #aside {
+    box-shadow: 5px 5px 7px 0px #fa6f1f;
+  }
+}
+.dark-mode main #aside .card {
+  background-color: #252525;
+}
+.dark-mode main #aside .card .text-muted {
+  color: rgb(190, 190, 190) !important;
+  transition: 0.6s;
+}
+.dark-mode main #aside #card-imageContainer {
+  background-color: #fa6f1f;
+}
+.dark-mode main #partnerText {
+  background-color: #252525;
+  box-shadow: 0px 5px 5px 5px #fa6f1f;
+}
+.dark-mode main #partnerText h3,
+.dark-mode main #partnerText p {
+  color: #fa6f1f;
+}
+.dark-mode main .partner1,
+.dark-mode main .partner2,
+.dark-mode main .partner3,
+.dark-mode main .partner4 {
+  background-color: #b14f16;
+  box-shadow: 5px 11px 7px 1px #fa6f1f;
+}
+.dark-mode footer {
+  background-color: #252525;
+}
+.dark-mode footer .row > div p {
+  color: rgb(190, 190, 190);
+}
+.dark-mode footer .row > div ul li a {
+  color: #fa6f1f;
+}
+
 body {
   background: rgb(194, 200, 252);
-  background: linear-gradient(90deg, rgb(194, 200, 252) 0%, rgb(216, 229, 251) 17%, rgb(228, 225, 251) 36%, rgb(229, 204, 251) 66%, rgb(202, 231, 251) 100%);
+  background: linear-gradient(90deg, #c2c8fc 0%, #d8e5fb 17%, #e4e1fb 36%, #e5ccfb 66%, #cae7fb 100%);
   font-family: "Ubuntu", sans-serif;
 }/*# sourceMappingURL=style.css.map */

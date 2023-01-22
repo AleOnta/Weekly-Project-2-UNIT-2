@@ -8,7 +8,8 @@
 @import "./partials/partners";
 @import "./partials/carousel";
 @import "./partials/footer";
-
+@import "./partials/themetoggler";
+@import "./partials/darkMode";
 body {
   background: rgb(194, 200, 252);
   background: $background;
